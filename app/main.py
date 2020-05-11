@@ -8,7 +8,9 @@ CORS(app)
 app = Flask(__name__)
 
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def home_view():
     return "<h1>Succesfully deployed on Heroku</h1>"
 	
+if __name__ == "__main__":
+    app.run()
